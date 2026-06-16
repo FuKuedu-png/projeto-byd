@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Inserindo Texto na Hero</title>
+</head>
+<body>
+    <header class="topo">
+        <nav class="menu">
+            <img src="./assets/image/byd-logo-branco.png" alt="Logo da BYD na cor branca" class="img-brand">
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#tecnologias" class="nav-link">Tecnologias</a></li>
+                <li class="nav-item"><a href="#modelos" class="nav-link">Modelos</a></li>
+                <li class="nav-item"><a href="#concessionarias" class="nav-link">Concessionárias</a></li>
+                <li class="nav-item cta-mobile">
+                    <a href="#" class="button-cta">Test Drive</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="hero-section" id="home">
+            <div class="linear-container">
+                <div class="text-hero-container">
+                    <h1 class="titulo-hero">O futuro da mobilidade já chegou. E ele está ao seu alcance.</h1>
+                    <h1 class="descricao-hero">Conheça a nova geração de veículos BYD: mais tecnologia, economia e sustentabilidade para transformar cada trajeto em uma experiência única. Descubra seu modelo ideal.</h1>
+                </div>
+            </div>          
+        </section>
+
+        <section class="card-container" id="tecnologias">
+            <div class="card-1 scroll-reveal">
+                <div class="overlay">
+                    <h3 class="card-title">e-Platform 3.0</h3>
+                    <p class="card-description">Tecnologia desenvolvida para entregar mais eficiência, segurança e desempenho.</p>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="card-2 scroll-reveal">
+                <div class="overlay">
+                    <h3 class="card-title">Super DM-i</h3>
+                    <p class="card-description">Sistema híbrido inteligente com mais economia, autonomia e performance.</p>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="card-3 scroll-reveal">
+                <div class="overlay">
+                    <h3 class="card-title">Nova Energia</h3>
+                    <p class="card-description">Soluções sustentáveis para uma mobilidade mais limpa e inteligente.</p>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="card-4 scroll-reveal">
+                <div class="overlay">
+                    <h3 class="card-title">Blade Battery</h3>
+                    <p class="card-description">Bateria segura, resistente e eficiente para veículos elétricos de alta tecnologia.</p>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="modelos" id="modelos">
+            <div class="hibridos">
+                <div class="modelos-content scroll-reveal">
+                    <a href="#" class="modelos-button">Ver Modelos</a>
+                </div>
+            </div>
+
+            <div class="eletricos">
+                <div class="modelos-content scroll-reveal">
+                    <a href="#" class="modelos-button">Ver Modelos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="conces-section" id="concessionarias">
+            <div class="linear-container-conces">
+                <h1 class="title-conces-section">Descubra qual modelo combina com o seu estilo de vida.</h1>
+                <a href="#" class="modelos-button">Ver Concessionárias</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé atualizado com contatos e redes sociais -->
+    <footer class="rodape" id="contato">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3 class="footer-title">Contato da Concessionária</h3>
+                <p>Av. das Américas, 1000 - Barra</p>
+                <p>Telefone: (11) 4002-8922</p>
+                <p>Email: contato@byd.com.br</p>
+            </div>
+            
+            <div class="footer-social">
+                <h3 class="footer-title">Redes Sociais</h3>
+                <ul class="social-list">
+                    <li><a href="#" class="social-link">Instagram</a></li>
+                    <li><a href="#" class="social-link">Facebook</a></li>
+                    <li><a href="#" class="social-link">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BYD. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navList = document.getElementById('nav-list');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+            document.body.style.overflow = navList.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+</body>
+</html>
