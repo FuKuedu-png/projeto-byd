@@ -118,7 +118,7 @@ body{
     min-height: 500px;
     display: flex;
     align-items: flex-end;
-    background-image: url(../assets/image/ChatGPT\ Image\ 16\ de\ jun.\ de\ 2026\,\ 14_08_37.png);
+    background-image: url(../assets/image/carro\ elegante1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 80%;
@@ -270,7 +270,7 @@ body{
 }
 
 .hibridos::after{ background-image: url(../assets/image/carro\ elegante.png); }
-.eletricos::after{ background-image: url(../assets/image/Gemini_Generated_Image_8bgtr8bgtr8bgtr8.png); }
+.eletricos::after{ background-image: url(../assets/image/carro\ elegante\ 2.png); }
 
 .hibridos::before, .eletricos::before{
     content: "";
